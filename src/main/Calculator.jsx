@@ -25,6 +25,7 @@ export default class Calculator extends Component{
 
             const values = [...this.state.values]
             try{
+                /* eslint-disable no-eval */
                 values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
                 if (isNaN(values[0]) || !isFinite(values[0])) {
                     this.clearMemory()
@@ -53,7 +54,7 @@ export default class Calculator extends Component{
         const displayValue = currentValue + n
         this.setState({displayValue,clearDisplay:false})
 
-        if (n != '.'){
+        if (n !== '.'){
             const i = this.state.current
             const newValue = parseFloat(displayValue)
             const values = [...this.state.values]
