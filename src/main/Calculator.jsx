@@ -16,33 +16,41 @@ export default class Calculator extends Component{
     clearMemory(){
         this.setState({ ...initialState })
     }
-    setOperation(operation){
-        if(this.state.current === 0){
-            this.setState({operation,current:1,clearDisplay:true})
-        }else{
-            const equals = operation === '='
-            const currentOperation = this.state.operation
-
-            const values = [...this.state.values]
-            try{
-                /* eslint-disable no-eval */
-                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
-                if (isNaN(values[0]) || !isFinite(values[0])) {
-                    this.clearMemory()
-                return
-                }
-            } catch(e){
-                values[0] = this.state.values[0]
-            }
-            values[1] = 0
-
+    setOperation(operation) {
+        if (this.state.current === 0) {
             this.setState({
-                displayValue:values[0],
+                displayValue: this.state.displayValue + operation  ,  // Mostra a expressão no display
+                operation,
+                current: 1,
+                clearDisplay: true,
+            });
+        } else {
+            const equals = operation === "=";
+            const currentOperation = this.state.operation;
+    
+            const values = [...this.state.values];
+            try {
+                if (currentOperation) {
+                    // eslint-disable-next-line 
+                    values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`);
+                    if (isNaN(values[0]) || !isFinite(values[0])) {
+                        this.clearMemory();
+                        return;
+                    }
+                }
+            } catch (e) {
+                values[0] = this.state.values[0];
+            }
+    
+            values[1] = 0; // Resetando o segundo valor após o cálculo
+    
+            this.setState({
+                displayValue: equals ? `${values[0]}` : `${values[0]} ${operation}`, // Mostra a expressão antes do cálculo
                 operation: equals ? null : operation,
                 current: equals ? 0 : 1,
-                clearDisplay: !equals,
-                values
-            })
+                clearDisplay: true,
+                values,
+            });
         }
     }
     addDigit(n){

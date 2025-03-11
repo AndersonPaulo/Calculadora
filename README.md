@@ -11,7 +11,7 @@
 </div>
 
 
-Este é um projeto de **calculadora de horas** desenvolvido com **React** e **JSX**. O objetivo principal deste projeto é fornecer uma interface simples para cálculos simples, além de servir como uma base para **testes automatizados** utilizando **Playwright**.
+Este é um projeto de **calculadora ** desenvolvido com **React** e **JSX**. O objetivo principal deste projeto é fornecer uma interface simples para cálculos simples, além de servir como uma base para **testes automatizados** utilizando **Playwright**.
 
 ## Tecnologias Usadas
 
