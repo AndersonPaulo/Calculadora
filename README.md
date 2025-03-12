@@ -1,5 +1,4 @@
-
-# Calculadora  - React & JSX
+# Calculadora - React & JSX
 
 <img src="/imagens/Calculadora.png">
 <div style="display: inline_block"><br/>
@@ -10,8 +9,7 @@
 
 </div>
 
-
-Este é um projeto de **calculadora ** desenvolvido com **React** e **JSX**. O objetivo principal deste projeto é fornecer uma interface simples para cálculos simples, além de servir como uma base para **testes automatizados** utilizando **Playwright**.
+Este é um projeto de **calculadora** desenvolvido com **React** e **JSX**. O objetivo principal deste projeto é fornecer uma interface simples para cálculos simples, além de servir como uma base para **testes automatizados** utilizando **Playwright**.
 
 ## Tecnologias Usadas
 
@@ -21,11 +19,11 @@ Este é um projeto de **calculadora ** desenvolvido com **React** e **JSX**. O o
 
 ## Funcionalidade
 
-A calculadora  permite realizar as seguintes operações:
+A calculadora permite realizar as seguintes operações:
 
-- Soma .
-- Subtração .
-- Exibição do resultado .
+- Soma.
+- Subtração.
+- Exibição do resultado.
 
 O foco principal deste projeto é a interação com a interface, facilitando o teste de funcionalidades como a entrada de dados e a execução de operações.
 
@@ -36,3 +34,49 @@ O foco principal deste projeto é a interação com a interface, facilitando o t
 ```bash
 git clone https://github.com/AndersonPaulo/Calculadora.git
 cd calculadora
+```
+
+### 2. Instale as dependências:
+
+```bash
+npm install
+```
+
+### 3. Inicie o servidor de desenvolvimento:
+
+```bash
+npm start
+```
+
+O servidor será iniciado em `http://localhost:3000`.
+
+## Testes com Playwright
+
+Para realizar os testes automatizados com o Playwright, siga os passos abaixo:
+
+### 1. Instale as dependências do Playwright:
+
+```bash
+npm install -D playwright
+```
+
+
+### 2. Execute os testes:
+
+Para rodar os testes, utilize o seguinte comando:
+
+```bash
+npx playwright test
+```
+
+Isso executará os testes e você verá o resultado no terminal.
+
+### 3. (Opcional) Executar testes em diferentes navegadores:
+
+Se quiser rodar os testes em outros navegadores (como Chromium, Firefox ou WebKit), use o seguinte comando:
+
+```bash
+npx playwright test --project=firefox
+```
+
+Esse comando executará os testes no navegador Firefox
