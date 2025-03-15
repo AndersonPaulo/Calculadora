@@ -22,10 +22,10 @@ Como um usuário, eu quero uma calculadora online com funcionalidades básicas p
 # Critérios de Aceitação:
 
 ✅ O usuário deve conseguir inserir dois ou mais  números.
-✅ O sistema deve oferecer botões para soma, subtração, multiplicação e divisão.
-✅ O resultado deve ser exibido imediatamente após o cálculo.
-✅ Se o usuário tentar dividir por zero, deve ser exibida uma mensagem de erro.
-✅ Se o usuário inserir valores inválidos, o sistema deve alertá-lo.
+✅ O sistema deve oferecer botões para soma, subtração, multiplicação e divisão.<br>
+✅ O resultado deve ser exibido imediatamente após o cálculo.<br>
+✅ Se o usuário tentar dividir por zero, deve ser exibida uma mensagem de erro.<br>
+✅ Se o usuário inserir valores inválidos, o sistema deve alertá-lo.<br>
 
 # Requisitos Mínimos
 
@@ -35,6 +35,10 @@ Validação de Entrada: Deve garantir que apenas números sejam inseridos e impe
 Tratamento de Erros: Caso o usuário tente dividir por zero ou insira valores inválidos, o sistema deve exibir uma mensagem de erro.
 
 # Casos de Testes
+
+<img src="/imagens/Calculadora.png">
+<img src="/imagens/Calculadora.png">
+<img src="/imagens/Calculadora.png">
 
 ## Tecnologias Usadas
 
