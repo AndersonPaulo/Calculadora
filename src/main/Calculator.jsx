@@ -78,23 +78,23 @@ export default class Calculator extends Component{
         return(
             <div className="calculator">
                     <Display value={this.state.displayValue}/>
-                    <Button data-qa="AC" label="AC" click ={clearMemory} triple/>
-                    <Button data-qa="/" label="/" click ={setOperation} operation/>
-                    <Button data-qa="7" label="7"click ={addDigit}/>
-                    <Button data-qa="8" label="8"click ={addDigit}/>
-                    <Button data-qa="9" label="9"click ={addDigit}/>
-                    <Button data-qa="*" label="*"click ={setOperation} operation/>
-                    <Button data-qa="4" label="4"click ={addDigit}/>
-                    <Button data-qa="5" label="5"click ={addDigit}/>
-                    <Button data-qa="6" label="6"click ={addDigit}/>
-                    <Button data-qa="-" label="-"click ={setOperation} operation/>
-                    <Button data-qa="1" label="1"click ={addDigit}/>
-                    <Button data-qa="2" label="2"click ={addDigit}/>
-                    <Button data-qa="3" label="3"click ={addDigit}/>
-                    <Button data-qa="+" label="+"click ={setOperation} operation/>
-                    <Button data-qa="0" label="0"click ={addDigit} double/>
-                    <Button data-qa="." label="."click ={addDigit}/>
-                    <Button data-qa="=" label="="click ={setOperation} operation/>
+                    <Button label="AC" click ={clearMemory} triple/>
+                    <Button label="/" click ={setOperation} operation/>
+                    <Button label="7"click ={addDigit}/>
+                    <Button label="8"click ={addDigit}/>
+                    <Button label="9"click ={addDigit}/>
+                    <Button label="*"click ={setOperation} operation/>
+                    <Button label="4"click ={addDigit}/>
+                    <Button label="5"click ={addDigit}/>
+                    <Button label="6"click ={addDigit}/>
+                    <Button label="-"click ={setOperation} operation/>
+                    <Button label="1"click ={addDigit}/>
+                    <Button label="2"click ={addDigit}/>
+                    <Button label="3"click ={addDigit}/>
+                    <Button label="+"click ={setOperation} operation/>
+                    <Button label="0"click ={addDigit} double/>
+                    <Button label="."click ={addDigit}/>
+                    <Button label="="click ={setOperation} operation/>
 
 
 
