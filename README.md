@@ -9,7 +9,32 @@
 
 </div>
 
-Este é um projeto de **calculadora** desenvolvido com **React** e **JSX**. O objetivo principal deste projeto é fornecer uma interface simples para cálculos simples, além de servir como uma base para **testes automatizados** utilizando **Playwright**.
+
+
+Este é um projeto de **calculadora** desenvolvido com **React** e **JSX**. O objetivo principal deste projeto é fornecer uma interface simples para cálculos simples (Adição ,Subtração,Multiplicação e Divisão), além de servir como uma base para **testes automatizados** utilizando **Playwright**.
+
+## Título: Calculadora Simples
+
+# Descrição:
+
+Como um usuário, eu quero uma calculadora online com funcionalidades básicas para realizar operações matemáticas simples, para que eu possa calcular valores sem precisar de uma calculadora física.
+
+# Critérios de Aceitação:
+
+✅ O usuário deve conseguir inserir dois ou mais  números.
+✅ O sistema deve oferecer botões para soma, subtração, multiplicação e divisão.
+✅ O resultado deve ser exibido imediatamente após o cálculo.
+✅ Se o usuário tentar dividir por zero, deve ser exibida uma mensagem de erro.
+✅ Se o usuário inserir valores inválidos, o sistema deve alertá-lo.
+
+# Requisitos Mínimos
+
+Interface Simples: Uma tela  para operações matemáticas.
+Operações Suportadas: Soma (+), Subtração (-), Multiplicação (*) e Divisão (/).
+Validação de Entrada: Deve garantir que apenas números sejam inseridos e impedir operações inválidas.
+Tratamento de Erros: Caso o usuário tente dividir por zero ou insira valores inválidos, o sistema deve exibir uma mensagem de erro.
+
+# Casos de Testes
 
 ## Tecnologias Usadas
 
@@ -17,15 +42,7 @@ Este é um projeto de **calculadora** desenvolvido com **React** e **JSX**. O ob
 - **JSX**: Sintaxe que combina JavaScript e HTML para criar componentes.
 - **Playwright**: Ferramenta para automação de testes end-to-end (E2E).
 
-## Funcionalidade
 
-A calculadora permite realizar as seguintes operações:
-
-- Soma.
-- Subtração.
-- Exibição do resultado.
-
-O foco principal deste projeto é a interação com a interface, facilitando o teste de funcionalidades como a entrada de dados e a execução de operações.
 
 ## Setup do Projeto
 
