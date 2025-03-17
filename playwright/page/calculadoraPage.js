@@ -20,7 +20,8 @@ export class CalculadoraPage {
         this.buttonAc           =  page.locator('[data-qa="AC"]')
         this.buttonEqual        =  page.locator('[data-qa="="]')
         this.buttonPoint        =  page.locator('[data-qa="."]')
-        this.buttonDisplay      =  expect(page.locator('[data-qa="display"]'))
+        this.Display            =  expect(page.locator('[data-qa="display"]'))
+        this.DisplayTow         =  page.locator('[data-qa="display"]')
     }
     async soma(value){        
 
@@ -31,7 +32,7 @@ export class CalculadoraPage {
             await this.buttonThre.click()
             await this.buttonSeven.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('62')          
+            await this.Display.toContainText('62')          
         }   
         else if( value === "negative"){
             await this.buttonSubtraction.click()
@@ -41,15 +42,15 @@ export class CalculadoraPage {
             await this.buttonOne.click()
             await this.buttonTwo.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('-13')
+            await this.Display.toContainText('-13')
         }
         else if( value === "zero"){
-            await this.buttonZero.click({force: true })
+            await this.buttonZero.click()
             await this.buttonSum.click()
             await this.buttonOne.click()
-            await this.buttonTwo.click({ force: true })
-            await this.buttonEqual.click({ force: true })
-            await this.buttonDisplay.toContainText('12')
+            await this.buttonTwo.click()
+            await this.buttonEqual.click()
+            await this.Display.toContainText('12')
         }    
 
     }
@@ -63,7 +64,7 @@ export class CalculadoraPage {
             await this.buttonOne.click()
             await this.buttonTwo.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('13')  
+            await this.Display.toContainText('13')  
         }
         else if( value === "negative"){
             await this.buttonSubtraction.click()
@@ -73,15 +74,15 @@ export class CalculadoraPage {
             await this.buttonOne.click()
             await this.buttonTwo.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('-37')
+            await this.Display.toContainText('-37')
         } 
-        else if( value === "zero"){
-            await this.buttonThre.click({ force: true })
-            await this.buttonTwo.click({ force: true })
-            await this.buttonSubtraction.click({ force: true })
-            await this.buttonZero.click({ force: true })
-            await this.buttonEqual.click({ force: true })
-            await this.buttonDisplay.toContainText('32')            
+        else {
+            await this.buttonThre.click()
+            await this.buttonTwo.click()
+            await this.buttonSubtraction.click()
+            await this.buttonZero.click()
+            await this.buttonEqual.click()
+            await this.Display.toContainText('32')            
         } 
         
     }
@@ -94,7 +95,7 @@ export class CalculadoraPage {
             await this.buttonDivision.click()
             await this.buttonFour.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('6.25')  
+            await this.Display.toContainText('6.25')  
         }
         else if( value === "negative"){
             await this.buttonSubtraction.click()
@@ -103,14 +104,14 @@ export class CalculadoraPage {
             await this.buttonDivision.click()
             await this.buttonTwo.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('-12.5')
+            await this.Display.toContainText('-12.5')
         } 
         else if( value === "zero"){
-            await this.buttonNine.click({ force: true })
-            await this.buttonDivision.click({ force: true })
-            await this.buttonZero.click({ force: true })
-            await this.buttonEqual.click({ force: true })
-            await this.buttonDisplay.toContainText('não é possível dividir por zero')            
+            await this.buttonNine.click()
+            await this.buttonDivision.click()
+            await this.buttonZero.click()
+            await this.buttonEqual.click()
+            await this.Display.toContainText('não é possível dividir por zero')            
         } 
 
     }
@@ -123,7 +124,7 @@ export class CalculadoraPage {
             await this.buttonMultiply.click()
             await this.buttonThre.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('75')  
+            await this.Display.toContainText('75')  
         }
         else if( value === "negative"){
             await this.buttonSubtraction.click()
@@ -133,15 +134,83 @@ export class CalculadoraPage {
             await this.buttonOne.click()
             await this.buttonTwo.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('-300')
+            await this.Display.toContainText('-300')
         }
         else if( value === "zero"){
-            await this.buttonZero.click({ force: true })
-            await this.buttonMultiply.click({ force: true })
-            await this.buttonNine.click({ force: true })
+            await this.buttonZero.click()
+            await this.buttonMultiply.click()
+            await this.buttonNine.click()
             await this.buttonEqual.click()
-            await this.buttonDisplay.toContainText('0')           
+            await this.Display.toContainText('0')           
         }  
     }
+    async operationsButton(){
+        await this.buttonSum.click()
+        await this.Display.toContainText('0+')
+        await this.buttonAc.click()
+        await this.buttonSubtraction.click()
+        await this.Display.toContainText('0-')
+        await this.buttonAc.click()
+        await this.buttonDivision.click()
+        await this.Display.toContainText('0/')
+        await this.buttonAc.click()
+        await this.buttonMultiply.click()
+        await this.Display.toContainText('0*')
+        await this.buttonAc.click()
+        await this.buttonPoint.click()
+        await this.Display.toContainText('.')
+        await this.buttonAc.click()
 
+    }
+    async numbersButton(){
+
+        await this.buttonOne.click()
+        await this.buttonTwo.click()
+        await this.buttonThre.click()
+        await this.buttonFour.click()
+        await this.buttonFive.click()
+        await this.buttonSix.click()
+        await this.buttonSeven.click()
+        await this.buttonEight.click()
+        await this.buttonNine.click()
+        await this.buttonZero.click()
+        await this.Display.toContainText('1234567890') 
+    }
+    async cleanButton(){
+
+        await this.buttonOne.click()
+        await this.buttonTwo.click()
+        await this.buttonThre.click()
+        await this.buttonFour.click()
+        await this.buttonFive.click()
+        await this.buttonSix.click()
+        await this.Display.toContainText('123456')
+        await this.buttonAc.click()
+        await this.Display.toContainText('0')
+        
+    }
+    async maxDigitoButton(expect){
+
+        await this.buttonOne.click()
+        await this.buttonTwo.click()
+        await this.buttonThre.click()
+        await this.buttonFour.click()
+        await this.buttonFive.click()
+        await this.buttonSix.click()
+        await this.buttonSeven.click()
+        await this.buttonEight.click()
+        await this.buttonNine.click()
+        await this.buttonZero.click()
+        await this.buttonSeven.click()
+        await this.buttonEight.click()
+        
+        const displayText = await this.DisplayTow.textContent() 
+
+        const digitCount = displayText.replace(/\D/g, '').length;
+
+        console.log(`Número de dígitos no display: ${digitCount}`);
+
+        expect(digitCount).toBeLessThanOrEqual(10)
+        
+    }
 }

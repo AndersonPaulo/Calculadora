@@ -13,14 +13,14 @@ test.describe('Operações com Zero', ()=>{
     test('Adição', async ({ page }) => {
         
         const PageCalc = new CalculadoraPage(page,expect)
-        PageCalc.soma(value)
+        await PageCalc.soma(value)
        
     })
     
     test('Subtração', async ({page}) =>{
     
         const PageCalc = new CalculadoraPage(page,expect)
-        PageCalc.subtraction(value)
+        await PageCalc.subtraction(value)
     
     
     })
@@ -28,7 +28,7 @@ test.describe('Operações com Zero', ()=>{
     test('Divisão', async ({page}) =>{
        
         const PageCalc = new CalculadoraPage(page,expect)
-        PageCalc.division(value)
+        await PageCalc.division(value)
     
     })
     
@@ -36,7 +36,7 @@ test.describe('Operações com Zero', ()=>{
     
        
         const PageCalc = new CalculadoraPage(page,expect)
-        PageCalc.multiply(value)
+        await PageCalc.multiply(value)
     
     })
     

@@ -2,6 +2,7 @@
 import { test, expect } from '@playwright/test'
 import { CalculadoraPage } from '../../page/calculadoraPage'
 const value = "negative"
+
 test.beforeEach(async ({ page }) =>{
 
     await page.goto('http://localhost:3000/')
